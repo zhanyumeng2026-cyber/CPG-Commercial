@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>詹雨萌 · 品牌管理 / CBD</title>
+<meta name="description" content="詹雨萌 Zhan Yumeng — 上海交通大学 2027 届硕士。腾讯 · 字节剪映 · 阶跃星辰 · 阿里国际 · 小红书五段互联网实践，把消费者洞察、内容表达与商业闭环迁移到快消品牌管理与 CBD。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0e1a2b;      /* 1 深墨蓝：文字 */
+  --blue:#1f4fd1;     /* 2 品牌蓝：强调 */
+  --sky:#eaf0fc;      /* 3 浅蓝：底色块 */
+  --white:#ffffff;    /* 4 白 */
+  --g1:#4a5566; --g2:#7c8696; --line:#e3e8f0; --bg2:#f6f8fc;
+  --r:16px; --max:1180px;
+  --sh:0 1px 2px rgba(14,26,43,.04),0 8px 24px rgba(14,26,43,.06);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:var(--white);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+/* ===== bilingual ===== */
+html[data-lang="zh"] .en{display:none!important}
+html[data-lang="en"] .zh{display:none!important}
+html[data-lang="en"] body{line-height:1.65}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 28px;height:62px;display:flex;align-items:center;gap:20px}
+.logo{font-weight:800;font-size:16.5px;letter-spacing:.2px;white-space:nowrap}
+.logo small{font-weight:600;color:var(--g2);font-size:12px;margin-left:8px;letter-spacing:1px}
+.links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.links::-webkit-scrollbar{display:none}
+.links a{font-size:13.5px;font-weight:600;color:var(--g1);padding:7px 11px;border-radius:8px;white-space:nowrap;transition:.15s}
+.links a:hover{color:var(--blue);background:var(--sky)}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;padding:3px;flex-shrink:0}
+.lang button{font-size:12.5px;font-weight:700;padding:4px 12px;border-radius:99px;color:var(--g2);transition:.15s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.dl{background:var(--blue);color:#fff;font-size:13.5px;font-weight:700;padding:8px 16px;border-radius:9px;white-space:nowrap;flex-shrink:0;transition:.15s}
+.dl:hover{background:var(--ink)}
+
+/* ===== HERO ===== */
+.hero{padding:72px 0 56px;background:
+  radial-gradient(900px 420px at 92% -8%,var(--sky) 0,transparent 62%),
+  radial-gradient(600px 300px at -4% 110%,#f1f5fd 0,transparent 60%)}
+.hero-g{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--blue);
+  background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:99px;box-shadow:var(--sh);margin-bottom:22px}
+h1{font-size:46px;line-height:1.2;letter-spacing:-1px;font-weight:800;margin-bottom:18px}
+html[data-lang="en"] h1{font-size:44px;letter-spacing:-1.2px}
+h1 .hl{color:var(--blue)}
+.who{font-size:15.5px;color:var(--g1);margin-bottom:22px;max-width:640px}
+.who b{color:var(--ink);font-weight:700}
+.belief{border-left:3px solid var(--blue);padding:4px 0 4px 18px;font-size:16px;font-weight:550;color:var(--ink);max-width:640px;margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;transition:.16s}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(31,79,209,.25)}
+.btn-p:hover{background:var(--ink);transform:translateY(-1px)}
+.btn-s{background:#fff;border:1px solid var(--line)}
+.btn-s:hover{border-color:var(--ink)}
+.btn svg{width:15px;height:15px}
+.photo{position:relative}
+.photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;border-radius:20px;box-shadow:0 24px 60px rgba(14,26,43,.14)}
+.photo .cap{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:12px;padding:11px 14px;font-size:12.5px;line-height:1.55;color:var(--g1)}
+.photo .cap b{display:block;color:var(--ink);font-size:13.5px}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:52px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.stat{padding:18px 16px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:24px;font-weight:800;letter-spacing:-.5px;color:var(--blue);line-height:1.2}
+.stat span{font-size:12px;color:var(--g1);line-height:1.5;display:block;margin-top:4px}
+
+/* ===== SECTION ===== */
+section{padding:84px 0}
+.alt{background:var(--bg2)}
+.sh{max-width:760px;margin-bottom:38px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+h2{font-size:32px;line-height:1.3;letter-spacing:-.6px;font-weight:800;margin-bottom:12px}
+.sh p{color:var(--g1);font-size:15.5px}
+
+/* WHY */
+.why-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--sh)}
+.num{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1.5px;margin-bottom:12px}
+.card h3{font-size:18px;line-height:1.4;margin-bottom:10px;font-weight:750}
+.card p{font-size:14.5px;color:var(--g1)}
+.card p b{color:var(--ink)}
+.manifesto{margin-top:22px;background:var(--ink);color:#fff;border-radius:var(--r);padding:34px 38px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.manifesto .q{font-size:56px;line-height:1;color:#7fa0f0;font-family:Georgia,serif}
+.manifesto p{font-size:18.5px;line-height:1.7;font-weight:550}
+.manifesto p span.s{display:block;font-size:13.5px;color:#aab6c9;margin-top:10px;font-weight:500}
+
+/* MATCH */
+.tabs{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:22px;box-shadow:var(--sh)}
+.tabs button{padding:9px 20px;border-radius:9px;font-size:14px;font-weight:700;color:var(--g1);transition:.15s}
+.tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.matrix{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.row{display:grid;grid-template-columns:1.05fr 1.9fr 1.15fr;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row>div{padding:18px 20px;font-size:14px}
+.row.head>div{background:var(--sky);font-size:12px;font-weight:800;letter-spacing:1px;color:var(--blue);text-transform:uppercase;padding:12px 20px}
+.req b{display:block;font-size:15px;font-weight:750;margin-bottom:3px}
+.req span{font-size:12.5px;color:var(--g2)}
+.ev{color:var(--g1)}
+.ev b{color:var(--ink);font-weight:700}
+.ev .src{display:inline-block;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--sky);border-radius:5px;padding:1px 7px;margin-right:6px}
+.tr{color:var(--ink);font-weight:600;border-left:1px dashed var(--line)}
+.tr::before{content:"→ ";color:var(--blue);font-weight:800}
+.panel[hidden]{display:none}
+.note{font-size:12.5px;color:var(--g2);margin-top:12px}
+
+/* LOOP */
+.loop{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;margin-top:6px}
+.node{position:relative;padding:0 10px;text-align:left}
+.node .dot{width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid var(--blue);display:grid;place-items:center;font-weight:800;color:var(--blue);font-size:15px;position:relative;z-index:1}
+.node:not(:last-child)::after{content:"";position:absolute;top:22px;left:54px;right:-10px;height:2px;background:linear-gradient(90deg,var(--blue),#b9c9f2)}
+.node h4{font-size:15.5px;margin:14px 0 4px;font-weight:750}
+.node .fm{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:8px}
+.node p{font-size:13px;color:var(--g1);line-height:1.6}
+.loop-back{margin-top:26px;border:1px dashed #b9c9f2;border-radius:12px;padding:14px 18px;font-size:13.5px;color:var(--g1);background:#fff}
+.loop-back b{color:var(--blue)}
+
+/* EXPERIENCE */
+.exp{display:grid;grid-template-columns:280px 1fr;gap:30px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;margin-bottom:18px;box-shadow:var(--sh)}
+.exp img{width:100%;height:100%;min-height:220px;max-height:300px;object-fit:cover;border-radius:12px}
+.exp .meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-bottom:4px}
+.exp h3{font-size:19px;font-weight:800}
+.exp .role{font-size:13.5px;color:var(--g1);font-weight:600}
+.exp .when{font-size:12.5px;color:var(--g2);margin-left:auto}
+.lens{display:inline-block;background:var(--sky);color:var(--blue);font-size:12.5px;font-weight:700;border-radius:7px;padding:4px 10px;margin:8px 0 12px}
+.exp ul{list-style:none;display:grid;gap:9px}
+.exp li{font-size:14px;color:var(--g1);padding-left:16px;position:relative}
+.exp li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.exp li b{color:var(--ink)}
+.fmcg{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink)}
+.fmcg em{font-style:normal;font-weight:800;color:var(--blue);margin-right:6px}
+.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mini .exp{grid-template-columns:1fr;padding:22px}
+.mini .exp img{min-height:0;height:180px}
+
+/* PROOF */
+.proof-g{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.feature{position:relative;border-radius:var(--r);overflow:hidden;min-height:360px;color:#fff;display:flex;align-items:flex-end}
+.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feature::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,43,0) 25%,rgba(14,26,43,.88));z-index:1}
+.feature .t{position:relative;z-index:2;padding:26px}
+.feature .tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.feature h3{font-size:21px;line-height:1.4;margin-bottom:6px}
+.feature p{font-size:13.5px;color:#d6deea}
+.stack{display:grid;gap:18px}
+.wb{background:var(--blue);color:#fff;border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px}
+.wb h3{font-size:19px;line-height:1.4}
+.wb p{font-size:13.5px;color:#dbe5ff}
+.wb a{align-self:flex-start;margin-top:6px;background:#fff;color:var(--blue);font-weight:800;font-size:13.5px;padding:9px 16px;border-radius:9px;transition:.15s}
+.wb a:hover{background:var(--ink);color:#fff}
+.honor ul{list-style:none;display:grid;gap:8px;margin-top:6px}
+.honor li{font-size:13.5px;color:var(--g1);display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:7px}
+.honor li:last-child{border-bottom:0}
+.honor li b{color:var(--ink);font-weight:650}
+.honor li span{white-space:nowrap;color:var(--blue);font-weight:700;font-size:12.5px}
+
+/* GLOBAL */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px}
+.gallery figure{position:relative;border-radius:12px;overflow:hidden;background:var(--sky)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:6px}
+.g-a{grid-column:span 2;grid-row:span 2}.g-b{grid-column:span 2}.g-c{grid-column:span 1}
+.edu{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.edu .card{padding:20px}
+.edu h4{font-size:15px;line-height:1.4;margin-bottom:4px}
+.edu .d{font-size:12px;color:var(--g2);margin-bottom:8px}
+.edu p{font-size:13px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#fff;padding:72px 0}
+.contact-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.cside{display:grid;grid-template-columns:1fr 176px;gap:16px;align-items:center}
+.cside .cbox{align-content:start}
+.qr{background:#fff;border-radius:var(--r);padding:14px 14px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.qr{margin:0}.qr img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.stat b span{display:inline!important;font-size:15px;color:var(--blue);margin:0}
+.qr figcaption{font-size:12.5px;font-weight:700;color:var(--ink)}
+@media (max-width:560px){.cside{grid-template-columns:1fr}.qr{max-width:200px}}
+.contact h2{color:#fff}
+.contact p{color:#b6c1d3}
+.cbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:24px;display:grid;gap:10px}
+.cbox a{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.06);border-radius:10px;padding:12px 16px;font-size:14px;font-weight:650;transition:.15s}
+.cbox a:hover{background:var(--blue)}
+.cbox a span{color:#aab6c9;font-weight:500;font-size:12.5px}
+footer{background:var(--ink);color:#7f8ba0;font-size:12.5px;text-align:center;padding:0 0 30px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.gallery img{transition:none}}
+.no-js .rv{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1020px){
+  .links{display:none}
+  .hero-g{grid-template-columns:1fr;gap:36px}
+  .photo{max-width:none}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat:nth-child(3){border-right:0}.stat:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .why-g{grid-template-columns:1fr}
+  .loop{grid-template-columns:repeat(3,1fr);row-gap:30px}
+  .node:nth-child(3)::after{display:none}
+  .proof-g,.contact-g{grid-template-columns:1fr}
+  .edu{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:720px){
+  .wrap,.nav-in{padding:0 18px}
+  .logo small{display:none}
+  .dl{padding:7px 12px;font-size:12.5px}
+  h1,html[data-lang="en"] h1{font-size:32px}
+  h2{font-size:25px}
+  section{padding:60px 0}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)}
+  .stat:nth-child(2n){border-right:0!important}
+  .row{grid-template-columns:1fr}
+  .row.head{display:none}
+  .row>div{padding:8px 18px}
+  .row>div:first-child{padding-top:16px}.row>div:last-child{padding-bottom:16px}
+  .tr{border-left:0}
+  .loop{grid-template-columns:1fr}
+  .node::after{display:none}
+  .exp{grid-template-columns:1fr}
+  .exp img{max-height:200px;min-height:0;height:200px}
+  .exp .when{margin-left:0}
+  .mini{grid-template-columns:1fr}
+  .manifesto{grid-template-columns:1fr;padding:26px}
+  .manifesto .q{display:none}
+  .edu{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .g-a{grid-column:span 2}
+}
+/* ===== v2 additions ===== */
+.sr{position:absolute;left:-999px;top:8px;width:auto;height:auto;clip:auto;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;z-index:99}
+.sr:focus{left:12px}
+.h3sub{font-size:22px;font-weight:800;letter-spacing:-.3px;margin:56px 0 18px}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.work{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.work .k{font-size:11.5px;font-weight:800;letter-spacing:1.2px;color:var(--blue);margin-bottom:8px;text-transform:uppercase}
+.work h4{font-size:16px;line-height:1.45;margin-bottom:6px}
+.work p{font-size:13.5px;color:var(--g1)}
+.also{margin-top:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;display:grid;gap:10px;box-shadow:var(--sh)}
+.also div{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;font-size:14px;color:var(--g1)}
+.also b{color:var(--ink);font-size:15px}
+.also span.w{margin-left:auto;font-size:12.5px;color:var(--g2)}
+.journey{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:start}
+.tl{position:relative;padding-left:30px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--blue),#c9d6f5)}
+.tl-i{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--sh)}
+.tl-i::before{content:"";position:absolute;left:-28px;top:22px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.tl-i .y{font-size:12.5px;font-weight:800;color:var(--blue);letter-spacing:.5px}
+.tl-i h4{font-size:16px;margin:2px 0 4px}
+.tl-i p{font-size:13.5px;color:var(--g1)}
+.jcols{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.jh{font-size:18px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.jh::before{content:"";width:18px;height:3px;border-radius:2px;background:var(--blue)}
+.jextra{display:grid;gap:14px;margin-top:4px}
+.tl-i.next{border-style:dashed;border-color:#b9c9f2;background:var(--sky);box-shadow:none}
+.tl-i.next::before{background:var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--g1)}
+.chips span b{color:var(--blue)}
+@media (max-width:1020px){.jcols{grid-template-columns:1fr}.works{grid-template-columns:1fr 1fr}.journey{grid-template-columns:1fr}}
+@media (max-width:720px){.works{grid-template-columns:1fr}.also span.w{margin-left:0}}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top"><span class="zh">詹雨萌</span><span class="en">Yumeng Zhan</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#exp"><span class="zh">实习经历</span><span class="en">Experience</span></a>
+      <a href="#work"><span class="zh">作品产出</span><span class="en">Work</span></a>
+      <a href="#journey"><span class="zh">成长旅程</span><span class="en">Journey</span></a>
+      <a href="#skills"><span class="zh">专业能力</span><span class="en">Skills</span></a>
+      <a href="#brand"><span class="zh">品牌认知</span><span class="en">On Brands</span></a>
+      <a href="#global"><span class="zh">全球视野</span><span class="en">Global</span></a>
+      <a href="#contact"><span class="zh">欢迎联系</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="zh" aria-pressed="true">中</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="dl js-view" href="resume/%E8%A9%B9%E9%9B%A8%E8%90%8C-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7985-2027%E5%BA%94%E5%B1%8A%E6%A0%A1%E6%8B%9B.pdf" target="_blank" rel="noopener"><span class="zh">查看简历</span><span class="en">Résumé</span></a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ 个人定位 ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-g">
+      <div>
+        <div class="kicker">🍋 <span class="zh">Consumer is Boss · 专业、真诚、可靠、持续成长</span><span class="en">Consumer is Boss · Professional, genuine, reliable — always growing</span></div>
+        <h1>
+          <span class="zh">让好产品<span class="hl">被看见</span>，<br>让好品牌<span class="hl">被选择</span>。</span>
+          <span class="en">Good products deserve<br>to be <span class="hl">seen</span> — and <span class="hl">chosen</span>.</span>
+        </h1>
+        <p class="who">
+          <span class="zh"><b>上海交通大学设计硕士</b>，曾赴 UNSW 商学院交换。先后在<b>腾讯、字节剪映、阶跃星辰、阿里国际、小红书</b>实习，做过 AI 产品、内容策略和商家增长。一路下来我最在意的始终是三件事：<b>读懂消费者、讲好一个故事、用结果说话</b>。</span>
+          <span class="en">I'm a design master's student at <b>Shanghai Jiao Tong University</b>, with an exchange semester at <b>UNSW Business School</b>. I've interned at <b>Tencent, ByteDance (CapCut), StepFun, Alibaba International and Xiaohongshu</b> — across AI products, content strategy and merchant growth. Through all of it, I've cared about three things: <b>understanding people, telling a good story, and letting results do the talking</b>.</span>
+        </p>
+        <p class="belief">
+          <span class="zh">我希望用 AI 和有温度的表达，让真正好的产品被更多人看见；也希望品牌力最终能落到货架上、复购里和生意结果中。</span>
+          <span class="en">I want to use AI and honest, human storytelling to help great products find their people — and make sure that brand love shows up where it matters: on the shelf, in repeat purchases, and in the numbers.</span>
+        </p>
+        <div class="btns">
+          <a class="btn btn-p js-view" href="resume/%E8%A9%B9%E9%9B%A8%E8%90%8C-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7985-2027%E5%BA%94%E5%B1%8A%E6%A0%A1%E6%8B%9B.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg><span class="zh">查看 / 下载简历</span><span class="en">View &amp; download résumé</span></a>
+          <a class="btn btn-s js-view" href="resume/%E8%A9%B9%E9%9B%A8%E8%90%8C-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7985-2027%E5%BA%94%E5%B1%8A%E7%A7%8B%E6%8B%9B-%E4%BD%9C%E5%93%81%E9%9B%86.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="zh">查看作品展示</span><span class="en">View portfolio</span></a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="img/hero-16x9.jpg" alt="詹雨萌 Yumeng Zhan" width="1920" height="1080">
+        <figcaption class="cap">
+          <b><span class="zh">詹雨萌 · Yumeng Zhan</span><span class="en">Yumeng Zhan · 詹雨萌</span></b>
+          <span class="zh">现居上海 · 可接受广州 / 北京 / 全国轮岗</span><span class="en">Based in Shanghai · Open to Guangzhou, Beijing or rotation</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="stats rv" role="list">
+      <div class="stat" role="listitem"><b>+9.83%</b><span class="zh">剪小映 AI 成片活跃采纳率</span><span class="en">Lift in AI video adoption at CapCut</span></div>
+      <div class="stat" role="listitem"><b>+35%</b><span class="zh">商家 SEO 营销内容生产效率</span><span class="en">Faster SEO content for merchants</span></div>
+      <div class="stat" role="listitem"><b>0→1亿</b><span class="zh">团队自研模型日均调用量</span><span class="en">0 → 100M daily model calls (team)</span></div>
+      <div class="stat" role="listitem"><b style="white-space:nowrap">7<span class="zh">天</span><span class="en"> days</span></b><span class="zh">拉齐 105 项评测标准</span><span class="en">To align 105 evaluation criteria</span></div>
+      <div class="stat" role="listitem"><b>3×</b><span class="zh">国家奖学金，本科专业第一</span><span class="en">National Scholarship; #1 of 299 in undergrad</span></div>
+      <div class="stat" role="listitem"><b>7</b><span class="zh">项全国一等奖，含「挑战杯」</span><span class="en">National first prizes, incl. Challenge Cup</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 实习经历 ============ -->
+<section id="exp">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">Experience</div>
+      <h2><span class="zh">实习经历</span><span class="en">Experience</span></h2>
+      <p><span class="zh">五家公司，横跨 C 端产品、B 端大客户与电商平台。</span><span class="en">Five companies, spanning consumer apps, enterprise clients and e-commerce.</span></p>
+    </div>
+
+    <article class="exp rv">
+      <img src="img/tencent-desk.jpg" alt="Tencent" loading="lazy">
+      <div>
+        <div class="meta"><h3><span class="zh">腾讯 · 智能创作平台部</span><span class="en">Tencent · Intelligent Creation Platform</span></h3><span class="role"><span class="zh">AI 产品策划</span><span class="en">AI Product Intern</span></span><span class="when">2026.06 – <span class="zh">至今</span><span class="en">now</span> · <span class="zh">深圳</span><span class="en">Shenzhen</span></span></div>
+        <span class="lens"><span class="zh">Work Rally · 腾讯视频 AI 影视制作平台</span><span class="en">Work Rally · Tencent Video's AI film production platform</span></span>
+        <ul>
+          <li><span class="zh"><b>新功能上手：</b>新功能渗透率低、用户不会用，我牵头设计了「轮播弹窗 + 新手任务」的引导方案，让功能从上线真正走到被使用。</span><span class="en"><b>Getting features adopted:</b> New features weren't being found or used, so I led an onboarding flow — carousel prompts plus starter tasks — to turn launches into real usage.</span></li>
+          <li><span class="zh"><b>团队协作：</b>主动做出消息中心的交互原型，和研发一起上线站内消息、消息后台与分级权限。</span><span class="en"><b>Team workflow:</b> Built a clickable prototype for a message center on my own initiative, then shipped in-app notifications, an admin console and tiered permissions with engineering.</span></li>
+          <li><span class="zh"><b>快速验证：</b>3 天做出「快速剪辑」原型，交给创作团队试用。</span><span class="en"><b>Moving fast:</b> Put together a "Quick Cut" prototype in three days for creators to try out.</span></li>
+        </ul>
+        <p class="fmcg"><em><span class="zh">专业能力匹配</span><span class="en">Skills match</span></em><span class="zh">新功能冷启动，就像新品上市：从被看到、被试用，到被反复使用。</span><span class="en">A feature launch works like a new product launch: get noticed, get tried, get bought again.</span></p>
+      </div>
+    </article>
+
+    <article class="exp rv">
+      <img src="img/speaking.jpg" alt="ByteDance CapCut" loading="lazy">
+      <div>
+        <div class="meta"><h3><span class="zh">字节跳动 · 剪映</span><span class="en">ByteDance · CapCut</span></h3><span class="role"><span class="zh">AI 算法策略</span><span class="en">AI Strategy Intern</span></span><span class="when">2025.10 – 2026.02 · <span class="zh">深圳</span><span class="en">Shenzhen</span></span></div>
+        <span class="lens"><span class="zh">剪小映 · AI 智能成片 App</span><span class="en">Jian Xiaoying · an AI video-making app</span></span>
+        <ul>
+          <li><span class="zh"><b>人群与定位：</b>基于种子用户数据，梳理不同年龄段的需求差异，支持产品从「帮你剪片」转向「陪你记录」。</span><span class="en"><b>Audience &amp; positioning:</b> Dug into seed-user data to see how needs differed by age, which fed the product's shift from "edits your videos" to "keeps you company".</span></li>
+          <li><span class="zh"><b>定义好标准：</b>从文案、音乐、包装、推荐四个方面建立 16 项效果指标，完成 11 轮调优验收。</span><span class="en"><b>Defining "good":</b> Set up 16 quality metrics across copy, music, styling and recommendations, and ran 11 rounds of tuning.</span></li>
+          <li><span class="zh"><b>规模上线：</b>3 周跑通原型，2 个月全量上线，<b>成片活跃采纳率提升 9.83%</b>。</span><span class="en"><b>Scaling up:</b> Three weeks to a working demo, two months to full rollout — <b>active adoption up 9.83%</b>.</span></li>
+        </ul>
+        <p class="fmcg"><em><span class="zh">专业能力匹配</span><span class="en">Skills match</span></em><span class="zh">找人群、改主张、定标准、看采纳，本质上是一次品牌焕新。</span><span class="en">Find the audience, sharpen the promise, set the bar, track uptake — basically a brand refresh.</span></p>
+      </div>
+    </article>
+
+    <article class="exp rv">
+      <img src="img/waic.jpg" alt="WAIC 2025 StepFun" loading="lazy">
+      <div>
+        <div class="meta"><h3><span class="zh">阶跃星辰 · AI 商业化</span><span class="en">StepFun · AI Commercialization</span></h3><span class="role"><span class="zh">AI 产品经理</span><span class="en">AI Product Manager Intern</span></span><span class="when">2025.05 – 2025.08 · <span class="zh">上海</span><span class="en">Shanghai</span></span></div>
+        <span class="lens"><span class="zh">Step Audio 2 · 端到端语音大模型</span><span class="en">Step Audio 2 · an end-to-end voice model</span></span>
+        <ul>
+          <li><span class="zh"><b>大客户合作：</b>围绕外呼、金融、车载场景做行业方案，和中国移动、吉利汽车在 WAIC 完成合作交付。</span><span class="en"><b>Key clients:</b> Built industry solutions for call centers, finance and in-car use, and delivered projects with China Mobile and Geely at WAIC.</span></li>
+          <li><span class="zh"><b>竞品对标：</b>3 天搭好评测方案，7 天统一 105 项标准，写了 525 条测试脚本，完成 21 轮评测。</span><span class="en"><b>Benchmarking:</b> Designed the evaluation plan in three days, aligned 105 criteria in a week, wrote 525 test scripts and ran 21 rounds against competitors.</span></li>
+          <li><span class="zh"><b>发布传播：</b>主动制作发布宣传片，支持模型在 WAIC 亮相。</span><span class="en"><b>Launch:</b> Volunteered to make the launch video for the model's debut at WAIC.</span></li>
+        </ul>
+        <p class="fmcg"><em><span class="zh">专业能力匹配</span><span class="en">Skills match</span></em><span class="zh">竞品对标、和客户一起做方案、配合上市活动，正是 CBD 与品牌日常的工作。</span><span class="en">Competitive benchmarking, co-building plans with customers and supporting a launch is everyday work in CBD and brand teams.</span></p>
+      </div>
+    </article>
+
+    <article class="exp rv">
+      <img src="img/alibaba-team.jpg" alt="Alibaba International" loading="lazy">
+      <div>
+        <div class="meta"><h3><span class="zh">阿里巴巴国际数字商业集团</span><span class="en">Alibaba International Digital Commerce</span></h3><span class="role"><span class="zh">AI 产品运营</span><span class="en">AI Operations Intern</span></span><span class="when">2024.03 – 2024.09 · <span class="zh">杭州</span><span class="en">Hangzhou</span></span></div>
+        <span class="lens"><span class="zh">淘宝海外 · 跨境电商</span><span class="en">Taobao Global · cross-border e-commerce</span></span>
+        <ul>
+          <li><span class="zh"><b>本地化：</b>针对翻译不准和文化差异，落地 6 项策略、8 轮调优，支持淘宝海外新加坡站多语言版上线。</span><span class="en"><b>Localization:</b> Tackled clunky translations and cultural gaps with six fixes over eight rounds, helping launch Taobao Global's multilingual site in Singapore.</span></li>
+          <li><span class="zh"><b>商家增长：</b>独立负责跨境商家的 AI 图文营销方案，从需求到效果追踪全程跟进，<b>内容生产效率提升 35%</b>。</span><span class="en"><b>Merchant growth:</b> Owned an AI marketing-content solution for cross-border sellers from brief to results — <b>35% faster content production</b>.</span></li>
+          <li><span class="zh"><b>规模：</b>支持团队自研模型日均调用量从 0 增长到 1 亿。</span><span class="en"><b>Scale:</b> Helped the team's in-house model grow from zero to 100M calls a day.</span></li>
+        </ul>
+        <p class="fmcg"><em><span class="zh">专业能力匹配</span><span class="en">Skills match</span></em><span class="zh">帮商家在平台上被看见、被搜到、被买走，就是电商渠道和客户运营的核心。</span><span class="en">Helping sellers get seen, found and bought on a platform is the heart of e-commerce and customer management.</span></p>
+      </div>
+    </article>
+
+    <div class="also rv">
+      <div><b><span class="zh">腾讯 · 市场与公关部</span><span class="en">Tencent · Marketing &amp; PR</span></b><span class="zh">传播研习生：问卷 + 深访做研究，「短视频 + 图文」做社媒传播</span><span class="en">Comms trainee: surveys and interviews, then a short-video + post social campaign</span><span class="w">2025.05 – 2025.06 · <span class="zh">深圳</span><span class="en">Shenzhen</span></span></div>
+      <div><b><span class="zh">小红书 · 商业效能部</span><span class="en">Xiaohongshu · Business Efficiency</span></b><span class="zh">商业化运营实习</span><span class="en">Commercial Operations Intern</span><span class="w">2024.01 – 2024.03 · <span class="zh">上海</span><span class="en">Shanghai</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 作品产出 ============ -->
+<section class="alt" id="work">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">Selected Work</div>
+      <h2><span class="zh">作品产出</span><span class="en">Selected Work</span></h2>
+      <p><span class="zh">能打开、能看到的成果。</span><span class="en">Things you can actually open and look at.</span></p>
+    </div>
+    <div class="proof-g">
+      <div class="feature rv">
+        <img src="img/broadcast.jpg" alt="SMG broadcast studio" loading="lazy">
+        <div class="t">
+          <span class="tag"><span class="zh">2025 中国正能量网络传播 AI 精品案例</span><span class="en">NATIONAL AI SHOWCASE 2025</span></span>
+          <h3><span class="zh">《AIGC 穿越600年：从紫禁城到故宫博物院》</span><span class="en">600 Years in AI: From the Forbidden City to the Palace Museum</span></h3>
+          <p><span class="zh">为上海广播电视台故宫百年特别报道制作。从剧本、史料、AI 画面到剪辑成片，我负责完整流程。</span><span class="en">Made for Shanghai Media Group's Palace Museum centennial coverage. I handled everything from script and research to AI visuals and the final edit.</span></p>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="wb rv">
+          <span style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:#bcd0ff"><span class="zh">独立开发 · 在线可用</span><span class="en">BUILT BY ME · LIVE</span></span>
+          <h3><span class="zh">AI 模型智能评测平台</span><span class="en">AI Model Evaluation Workbench</span></h3>
+          <p><span class="zh">把在字节、阶跃、阿里积累的评测方法做成了工具：定标准、打分、对比。背后是同一个习惯——用清楚的标准判断什么是好产品。</span><span class="en">I turned the evaluation methods I used at ByteDance, StepFun and Alibaba into a tool: set the criteria, score, compare. Same instinct behind it — be clear about what "better" actually means.</span></p>
+          <a href="https://yumeng-model-evaluation-workbench.netlify.app/" target="_blank" rel="noopener"><span class="zh">打开平台 ↗</span><span class="en">Try it ↗</span></a>
+        </div>
+        <div class="card rv" style="padding:0;overflow:hidden">
+          <img src="img/step3-expo.jpg" alt="StepFun launch" loading="lazy" style="width:100%;height:150px;object-fit:cover">
+          <div style="padding:18px 22px">
+            <div class="num">LAUNCH FILM</div>
+            <h3 style="font-size:16px;margin-bottom:4px"><span class="zh">Step Audio 2 发布宣传片</span><span class="en">Step Audio 2 launch video</span></h3>
+            <p style="font-size:13.5px"><span class="zh">为业内首个端到端语音大模型的 WAIC 发布主动策划并制作。</span><span class="en">Pitched and produced for the WAIC debut of the industry's first end-to-end voice model.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="works">
+      <div class="work rv"><div class="k"><span class="zh">社媒传播</span><span class="en">Social</span></div><h4><span class="zh">腾讯工具品牌传播</span><span class="en">Tencent Tools brand campaign</span></h4><p><span class="zh">以「短视频 + 图文」讲述「腾讯擅长打造国民级工具」。</span><span class="en">Short videos and posts built around one idea: Tencent makes the tools everyone uses.</span></p></div>
+      <div class="work rv"><div class="k"><span class="zh">视觉创作</span><span class="en">Visual</span></div><h4><span class="zh">北京大学 AI 画册《白马二十四时》</span><span class="en">"24 Hours of the White Horse" · PKU</span></h4><p><span class="zh">负责整本画册的视觉设计。</span><span class="en">Led visual design for an AI-illustrated book.</span></p></div>
+      <div class="work rv"><div class="k"><span class="zh">短片</span><span class="en">Film</span></div><h4><span class="zh">上海交大 AI 短片</span><span class="en">AI short films for SJTU</span></h4><p><span class="zh">带领团队制作《十年后的你在哪儿》《交大建校 130 周年公告》。</span><span class="en">Led the team behind "Where Will You Be in Ten Years?" and SJTU's 130th-anniversary film.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 成长旅程 ============ -->
+<section id="journey">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">My Journey</div>
+      <h2><span class="zh">成长旅程</span><span class="en">My Journey</span></h2>
+      <p><span class="zh">从影像到设计，从 AI 产品到做品牌管理。</span><span class="en">From film to design, from AI products to brand management.</span></p>
+    </div>
+    <div class="jcols">
+      <div class="jcol">
+        <h3 class="jh rv"><span class="zh">学习路径</span><span class="en">Education</span></h3>
+        <div class="tl">
+        <div class="tl-i rv"><div class="y">2024.09 – 2027.06</div><h4><span class="zh">上海交通大学 · 设计硕士</span><span class="en">Shanghai Jiao Tong University · Master of Design</span></h4><p><span class="zh">上海交大–南加州大学文化创意产业学院。系统学习管理学、公司财务与媒介经营。GPA 3.83，排名 2/14，国家奖学金。</span><span class="en">USC–SJTU Institute of Cultural and Creative Industry. Management, corporate finance and media business. GPA 3.83, ranked 2nd of 14, National Scholarship.</span></p></div>
+        <div class="tl-i rv"><div class="y">2026.02 – 2026.06</div><h4><span class="zh">新南威尔士大学 · 商学院交换</span><span class="en">UNSW Business School · Exchange</span></h4><p><span class="zh">长江奖学金。社会创业、AI 素养、个人理财——开始认真思考：技术之外，什么让人愿意买单？</span><span class="en">Cheung Kong Scholarship. Social entrepreneurship, AI fluency and personal finance — and a lot of thinking about what really makes people buy.</span></p></div>
+        <div class="tl-i rv"><div class="y">2025.07 – 2025.08</div><h4><span class="zh">北京大学 · 暑期交换</span><span class="en">Peking University · Summer Program</span></h4><p><span class="zh">智能学院与文化产业研究院。量化投资、金融时序预测、文化创意产业调研。</span><span class="en">School of AI and Institute for Cultural Industries. Quant investing, financial forecasting and creative-industry research.</span></p></div>
+        <div class="tl-i rv"><div class="y">2020.09 – 2024.06</div><h4><span class="zh">东北电力大学 · 广播电视编导</span><span class="en">Northeast Electric Power University · B.A. in TV &amp; Film Directing</span></h4><p><span class="zh">学会讲故事，学会用镜头和剪辑打动人。专业第一（1/299），两次国家奖学金，带队完成国家级大创项目。</span><span class="en">Where I learned to tell stories and move people with a camera and an edit. Ranked 1st of 299, National Scholarship twice, led a national innovation project.</span></p></div>
+        </div>
+        <div class="jextra">
+          <figure class="card rv" style="padding:0;overflow:hidden;margin:0"><img src="img/stage.jpg" alt="Stage" loading="lazy" style="width:100%;height:200px;object-fit:cover"></figure>
+          <div class="card honor rv">
+          <div class="num"><span class="zh">荣誉</span><span class="en">HONORS</span></div>
+          <ul>
+            <li><b><span class="zh">国家奖学金 × 3</span><span class="en">National Scholarship × 3</span></b><span>Top 1‰</span></li>
+            <li><b><span class="zh">中国大学生自强之星</span><span class="en">China College Student Role Model</span></b><span>0.15‰</span></li>
+            <li><b><span class="zh">「挑战杯」全国竞赛</span><span class="en">Challenge Cup (national)</span></b><span class="zh">一等奖</span><span class="en">1st Prize</span></li>
+            <li><b><span class="zh">全国大学生英语竞赛</span><span class="en">National English Contest</span></b><span class="zh">特等奖</span><span class="en">Grand Prize</span></li>
+            <li><b><span class="zh">米兰设计周 · 中国高校作品展</span><span class="en">Milan Design Week · China Universities</span></b><span class="zh">一等奖</span><span class="en">1st Prize</span></li>
+            <li><b><span class="zh">论文 3 篇 · 实用新型专利 6 项</span><span class="en">3 papers · 6 utility patents</span></b><span>R&amp;D</span></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="jcol">
+        <h3 class="jh rv"><span class="zh">工作路径</span><span class="en">Work</span></h3>
+        <div class="tl">
+        <div class="tl-i rv next"><div class="y">Next</div><h4><span class="zh">下一站 · 快消品牌</span><span class="en">Next stop · FMCG</span></h4><p><span class="zh">带着对消费者、内容和数据的理解，走向离生意更近的地方。</span><span class="en">Taking what I know about people, content and data somewhere closer to the business.</span></p></div>
+        <div class="tl-i rv"><div class="y">2026.06 – <span class="zh">至今</span><span class="en">now</span></div><h4><span class="zh">腾讯 · Work Rally</span><span class="en">Tencent · Work Rally</span></h4><p><span class="zh">AI 产品策划。新功能引导、消息中心、快速剪辑原型。</span><span class="en">AI Product Intern. Feature onboarding, a message center and a Quick Cut prototype.</span></p></div>
+        <div class="tl-i rv"><div class="y">2025.10 – 2026.02</div><h4><span class="zh">字节跳动 · 剪映</span><span class="en">ByteDance · CapCut</span></h4><p><span class="zh">AI 算法策略。剪小映重新定位，成片活跃采纳率 +9.83%。</span><span class="en">AI Strategy Intern. Helped reposition Jian Xiaoying; active adoption up 9.83%.</span></p></div>
+        <div class="tl-i rv"><div class="y">2025.09 – 2025.10</div><h4><span class="zh">上海广播电视台 SMG</span><span class="en">Shanghai Media Group</span></h4><p><span class="zh">AIGC 特约编辑。《AIGC 穿越600年》获国家级 AI 精品案例。</span><span class="en">AIGC Guest Editor. "600 Years in AI" named a national AI showcase.</span></p></div>
+        <div class="tl-i rv"><div class="y">2025.05 – 2025.08</div><h4><span class="zh">阶跃星辰 · AI 商业化</span><span class="en">StepFun · AI Commercialization</span></h4><p><span class="zh">AI 产品经理。竞品评测、大客户交付、WAIC 发布。</span><span class="en">AI Product Manager Intern. Benchmarking, key-client delivery and a WAIC launch.</span></p></div>
+        <div class="tl-i rv"><div class="y">2025.05 – 2025.06</div><h4><span class="zh">腾讯 · 市场与公关部</span><span class="en">Tencent · Marketing &amp; PR</span></h4><p><span class="zh">传播研习生。问卷与深访，社媒传播策略。</span><span class="en">Comms trainee. Surveys, interviews and a social campaign.</span></p></div>
+        <div class="tl-i rv"><div class="y">2024.03 – 2024.09</div><h4><span class="zh">阿里巴巴国际</span><span class="en">Alibaba International</span></h4><p><span class="zh">AI 产品运营。新加坡站多语言上线，商家内容效率 +35%。</span><span class="en">AI Operations Intern. Singapore multilingual launch; merchant content 35% faster.</span></p></div>
+        <div class="tl-i rv"><div class="y">2024.01 – 2024.03</div><h4><span class="zh">小红书 · 商业效能部</span><span class="en">Xiaohongshu · Business Efficiency</span></h4><p><span class="zh">商业化运营实习。第一次站在平台一侧看生意。</span><span class="en">Commercial Operations Intern. My first look at business from the platform side.</span></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 专业能力 ============ -->
+<section class="alt" id="skills">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">What I Bring</div>
+      <h2><span class="zh">专业能力</span><span class="en">What I Bring</span></h2>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Role">
+      <button role="tab" id="t-bm" aria-controls="p-bm" aria-selected="true" tabindex="0"><span class="zh">品牌管理</span><span class="en">Brand Management</span></button>
+      <button role="tab" id="t-cbd" aria-controls="p-cbd" aria-selected="false" tabindex="-1"><span class="zh">客户业务发展 CBD</span><span class="en">Customer Business Development</span></button>
+    </div>
+
+    <div class="panel matrix" id="p-bm" role="tabpanel" aria-labelledby="t-bm">
+      <div class="row head"><div><span class="zh">能力</span><span class="en">Skill</span></div><div><span class="zh">实习经历</span><span class="en">Experience</span></div><div><span class="zh">岗位能力匹配</span><span class="en">Role fit</span></div></div>
+      <div class="row">
+        <div class="req"><b><span class="zh">消费者洞察</span><span class="en">Consumer insight</span></b><span>Consumer &amp; Market Knowledge</span></div>
+        <div class="ev"><span class="src">ByteDance</span><span class="zh">按年龄段拆解种子用户需求差异。</span><span class="en">Broke down seed-user needs by age group.</span><br><span class="src">Tencent</span><span class="zh">问卷 + 深度访谈，提炼传播策略。</span><span class="en">Ran surveys and in-depth interviews to shape the comms plan.</span></div>
+        <div class="tr"><span class="zh">找到没被满足的需求</span><span class="en">Spot the unmet need</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">品牌定位</span><span class="en">Positioning</span></b><span>Brand strategy</span></div>
+        <div class="ev"><span class="src">ByteDance</span><span class="zh">支持剪小映从「帮你剪片」转向「陪你记录」。</span><span class="en">Helped reposition Jian Xiaoying from an editing tool to a companion.</span></div>
+        <div class="tr"><span class="zh">说清楚：为谁、为什么选我们</span><span class="en">Be clear on who it's for and why us</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">产品创新</span><span class="en">Innovation</span></b><span>Concept · Product · Pack</span></div>
+        <div class="ev"><span class="src">Tencent</span><span class="zh">3 天做出原型交给用户试用。</span><span class="en">Three days from idea to a prototype users could try.</span><br><span class="src">ByteDance</span><span class="zh">3 周原型、2 个月全量上线。</span><span class="en">Three-week demo, full rollout in two months.</span></div>
+        <div class="tr"><span class="zh">小步测试，快速上市</span><span class="en">Test small, launch fast</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">整合传播</span><span class="en">Communications</span></b><span>Copy · Visual · Social · E-com</span></div>
+        <div class="ev"><span class="src">SMG</span><span class="zh">《AIGC 穿越600年》获国家级 AI 精品案例。</span><span class="en">"600 Years in AI" named a national AI showcase.</span><br><span class="src">StepFun</span><span class="zh">WAIC 发布宣传片。</span><span class="en">WAIC launch video.</span><br><span class="src">Tencent</span><span class="zh">「短视频 + 图文」社媒传播。</span><span class="en">Short-video and social campaign.</span></div>
+        <div class="tr"><span class="zh">懂文案、懂视觉，能判断创意好坏</span><span class="en">Good eye for copy, visuals and creative</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">商业分析</span><span class="en">Business analysis</span></b><span>Data &amp; finance</span></div>
+        <div class="ev"><span class="src">ByteDance</span><span class="zh">搭建 16 项效果指标体系。</span><span class="en">Built a 16-metric quality framework.</span><br><span class="src">Alibaba</span><span class="zh">全程追踪效果，内容效率 +35%。</span><span class="en">Tracked results end to end; content 35% faster.</span><br><span class="src">SJTU</span><span class="zh">公司财务、管理学课程。</span><span class="en">Corporate finance and management courses.</span></div>
+        <div class="tr"><span class="zh">用数据支撑判断</span><span class="en">Back decisions with data</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">跨团队协作</span><span class="en">Leading across teams</span></b><span>R&amp;D · Sales · Partners</span></div>
+        <div class="ev"><span class="src">StepFun</span><span class="zh">联动算法、工程和商务，交付中国移动、吉利汽车项目。</span><span class="en">Brought together research, engineering and sales to deliver for China Mobile and Geely.</span><br><span class="src">Campus</span><span class="zh">国家级大创项目负责人；上交人工智能协会科创部负责人。</span><span class="en">Led a national innovation project; led tech projects at the SJTU AI Association.</span></div>
+        <div class="tr"><span class="zh">不靠职位，也能推动事情</span><span class="en">Get things done without formal authority</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">英语沟通</span><span class="en">English</span></b><span>Spoken &amp; written</span></div>
+        <div class="ev"><span class="src">English</span><span class="zh">全国大学生英语竞赛特等奖，IELTS 6.5，CET-4 600，UNSW 交换。</span><span class="en">Grand Prize, National English Contest; IELTS 6.5; a semester at UNSW.</span></div>
+        <div class="tr"><span class="zh">可作为工作语言</span><span class="en">Comfortable working in English</span></div>
+      </div>
+    </div>
+
+    <div class="panel matrix" id="p-cbd" role="tabpanel" aria-labelledby="t-cbd" hidden>
+      <div class="row head"><div><span class="zh">能力</span><span class="en">Skill</span></div><div><span class="zh">实习经历</span><span class="en">Experience</span></div><div><span class="zh">岗位能力匹配</span><span class="en">Role fit</span></div></div>
+      <div class="row">
+        <div class="req"><b><span class="zh">客户与平台运营</span><span class="en">Customer &amp; platform management</span></b><span>Retailers · Platforms</span></div>
+        <div class="ev"><span class="src">Alibaba</span><span class="zh">为跨境中小商家搭建 AI 营销方案，帮助出海获客。</span><span class="en">Built AI marketing tools that helped small cross-border sellers win overseas buyers.</span><br><span class="src">Xiaohongshu</span><span class="zh">商业化运营实习。</span><span class="en">Commercial operations internship.</span></div>
+        <div class="tr"><span class="zh">帮客户在平台上赢</span><span class="en">Help customers win on the platform</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">共创价值</span><span class="en">Joint value creation</span></b><span>Win-win partnerships</span></div>
+        <div class="ev"><span class="src">StepFun</span><span class="zh">从客户场景出发做方案，与中国移动、吉利汽车完成交付。</span><span class="en">Started from each client's use case and delivered with China Mobile and Geely.</span></div>
+        <div class="tr"><span class="zh">先想客户要什么，再谈我们卖什么</span><span class="en">Start with what the customer needs, not what we're selling</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">零售执行</span><span class="en">Retail execution</span></b><span>Online &amp; offline</span></div>
+        <div class="ev"><span class="src">Alibaba</span><span class="zh">支持淘宝海外新加坡站多语言版上线。</span><span class="en">Helped launch Taobao Global's multilingual Singapore site.</span><br><span class="src">Tencent</span><span class="zh">用新手引导把新功能推到用户手里。</span><span class="en">Used onboarding to get new features into users' hands.</span></div>
+        <div class="tr"><span class="zh">懂电商货架与上市转化</span><span class="en">Know how e-com shelves and launches convert</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">市场与数据分析</span><span class="en">Market &amp; data sense</span></b><span>Category · Shopper</span></div>
+        <div class="ev"><span class="src">Alibaba</span><span class="zh">支持模型日均调用量从 0 到 1 亿。</span><span class="en">Supported growth from zero to 100M daily model calls.</span><br><span class="src">PKU</span><span class="zh">量化投资与时序预测课程。</span><span class="en">Coursework in quant investing and forecasting.</span></div>
+        <div class="tr"><span class="zh">用数据看品类和客户</span><span class="en">Read categories and customers through data</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">主人翁精神</span><span class="en">Ownership</span></b><span>Drive &amp; delivery</span></div>
+        <div class="ev"><span class="src">StepFun</span><span class="zh">3 天出方案，7 天统一 105 项标准，21 轮评测。</span><span class="en">Plan in three days, 105 criteria aligned in a week, 21 test rounds.</span><br><span class="src">Tencent</span><span class="zh">主动做原型，推动消息系统上线。</span><span class="en">Built a prototype unasked and pushed the notification system live.</span></div>
+        <div class="tr"><span class="zh">不等安排，把事情做完</span><span class="en">Don't wait to be told — finish the job</span></div>
+      </div>
+      <div class="row">
+        <div class="req"><b><span class="zh">学习力与流动性</span><span class="en">Adaptability &amp; mobility</span></b><span>Rotation-ready</span></div>
+        <div class="ev"><span class="src">Mobility</span><span class="zh">在深圳、上海、杭州、北京、悉尼学习和工作，经历过 C 端、B 端、平台、电商四类业务。</span><span class="en">Lived and worked in Shenzhen, Shanghai, Hangzhou, Beijing and Sydney, across consumer, B2B, platform and e-commerce businesses.</span></div>
+        <div class="tr"><span class="zh">换城市、换品类都能很快上手</span><span class="en">Quick to settle into a new city or category</span></div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ============ 品牌认知 ============ -->
+<section id="brand">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">On Brands</div>
+      <h2><span class="zh">品牌认知</span><span class="en">How I Think About Brands</span></h2>
+      <p><span class="zh">我理解的品牌，是一个从洞察出发、最终回到生意的完整闭环。</span><span class="en">To me, brand building is a loop — it starts with people and comes back around to the business.</span></p>
+    </div>
+    <div class="loop rv">
+      <div class="node"><div class="dot">1</div><h4><span class="zh">洞察</span><span class="en">Insight</span></h4><div class="fm">Consumer Insight</div><p><span class="zh">年龄分层 · 深度访谈</span><span class="en">Age segments · interviews</span></p></div>
+      <div class="node"><div class="dot">2</div><h4><span class="zh">定位</span><span class="en">Positioning</span></h4><div class="fm">Brand Promise</div><p><span class="zh">从剪片工具到记录伙伴</span><span class="en">From tool to companion</span></p></div>
+      <div class="node"><div class="dot">3</div><h4><span class="zh">产品</span><span class="en">Product</span></h4><div class="fm">Innovation</div><p><span class="zh">3 天原型 · 2 个月上线</span><span class="en">3-day prototype · 2-month rollout</span></p></div>
+      <div class="node"><div class="dot">4</div><h4><span class="zh">传播</span><span class="en">Story</span></h4><div class="fm">Communications</div><p><span class="zh">国家级 AI 案例 · WAIC 宣传片</span><span class="en">National AI showcase · WAIC video</span></p></div>
+      <div class="node"><div class="dot">5</div><h4><span class="zh">渠道</span><span class="en">Channel</span></h4><div class="fm">Go-to-Market</div><p><span class="zh">新加坡站上线 · 大客户交付</span><span class="en">Singapore launch · key clients</span></p></div>
+      <div class="node"><div class="dot">6</div><h4><span class="zh">结果</span><span class="en">Results</span></h4><div class="fm">Business Impact</div><p><span class="zh">采纳 +9.83% · 效率 +35%</span><span class="en">+9.83% adoption · 35% faster</span></p></div>
+    </div>
+    <div class="loop-back rv"><b>↺ <span class="zh">回到起点</span><span class="en">Back to the start</span></b> — <span class="zh">在阶跃和阿里，我习惯把使用数据带回下一轮迭代；在快消，就是把销售和消费者反馈带回下一版品牌计划。</span><span class="en">At StepFun and Alibaba, I always fed real usage data into the next round. In FMCG, that means taking sales and consumer feedback straight into the next brand plan.</span></div>
+
+    <h3 class="h3sub rv"><span class="zh">为什么选择快消</span><span class="en">Why FMCG</span></h3>
+    <div class="why-g">
+      <article class="card rv">
+        <div class="num">01</div>
+        <h3><span class="zh">离消费者更近</span><span class="en">Closer to real consumers</span></h3>
+        <p><span class="zh">在互联网，我通过数据认识用户；在快消，每一次购买都是真金白银的选择。<b>复购，是对品牌最诚实的评价。</b></span><span class="en">In tech, I got to know users through dashboards. In FMCG, every purchase is someone spending their own money. <b>A repeat purchase is the most honest review a brand can get.</b></span></p>
+      </article>
+      <article class="card rv">
+        <div class="num">02</div>
+        <h3><span class="zh">内容越多，品牌越重要</span><span class="en">More content, more need for brands</span></h3>
+        <p><span class="zh">我亲手做过 AI 内容生产，知道内容可以又快又多；但也正因如此，<b>被记住变得更难</b>。清晰的定位和有温度的表达，才会让人停下来，然后再次选择。</span><span class="en">I've built AI content tools, so I know how fast and cheap content has become. That's exactly why <b>being remembered is harder than ever</b>. A clear point of view and a genuine voice are what make people stop — and come back.</span></p>
+      </article>
+      <article class="card rv">
+        <div class="num">03</div>
+        <h3><span class="zh">对完整的生意负责</span><span class="en">Owning the whole business</span></h3>
+        <p><span class="zh">过去我常负责链路中的一环。快消的品牌和 CBD 经理，要对<b>洞察、产品、传播、渠道到财务结果</b>全程负责——这正是我想成长为的样子。</span><span class="en">In past roles, I usually owned one piece of the puzzle. Brand and CBD managers own <b>the whole thing — insight, product, comms, channel and P&amp;L</b>. That's the kind of person I want to become.</span></p>
+      </article>
+    </div>
+    <div class="manifesto rv">
+      <div class="q" aria-hidden="true">“</div>
+      <p>
+        <span class="zh">好产品不该因为不会表达而被埋没。我想用对人的理解、对内容的审美和对 AI 的熟悉，帮它们建立品牌，再让品牌回到生意本身。</span>
+        <span class="en">A great product shouldn't get lost just because it doesn't know how to speak up. I want to help good products build real brands — and turn that brand love into a business that lasts.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 全球视野 ============ -->
+<section class="alt" id="global">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="eyebrow">Global Outlook</div>
+      <h2><span class="zh">全球视野</span><span class="en">Global Outlook</span></h2>
+      <p><span class="zh">上海、深圳、杭州、北京、悉尼——在不同城市学习和工作，习惯了快速进入新环境。</span><span class="en">Shanghai, Shenzhen, Hangzhou, Beijing, Sydney. Moving around a lot has taught me to find my feet quickly.</span></p>
+    </div>
+    <div class="gallery rv">
+      <figure class="g-a"><img src="img/unsw.jpg" alt="UNSW Sydney" loading="lazy"><figcaption>UNSW · Sydney</figcaption></figure>
+      <figure class="g-b"><img src="img/stepfun.jpg" alt="StepFun" loading="lazy"><figcaption><span class="zh">阶跃星辰 · 上海</span><span class="en">StepFun · Shanghai</span></figcaption></figure>
+      <figure class="g-c"><img src="img/pku.jpg" alt="Peking University" loading="lazy"><figcaption><span class="zh">北京大学</span><span class="en">Peking University</span></figcaption></figure>
+      <figure class="g-c"><img src="img/xiaohongshu.jpg" alt="Xiaohongshu" loading="lazy"><figcaption><span class="zh">小红书</span><span class="en">Xiaohongshu</span></figcaption></figure>
+      <figure class="g-b"><img src="img/sydney.jpg" alt="Sydney" loading="lazy"><figcaption>Sydney</figcaption></figure>
+      <figure class="g-c"><img src="img/team.jpg" alt="Team" loading="lazy"><figcaption><span class="zh">团队</span><span class="en">Team</span></figcaption></figure>
+      <figure class="g-c"><img src="img/crosscultural.jpg" alt="Cross-cultural" loading="lazy"><figcaption><span class="zh">跨文化交流</span><span class="en">Cross-cultural</span></figcaption></figure>
+    </div>
+    <div class="edu">
+      <div class="card rv"><h4><span class="zh">新南威尔士大学 · 商学院</span><span class="en">UNSW Business School</span></h4><div class="d">2026.02 – 06 · Sydney</div><p><span class="zh">长江奖学金。社会创业、AI 素养、个人理财。</span><span class="en">Cheung Kong Scholarship. Social entrepreneurship, AI fluency, personal finance.</span></p></div>
+      <div class="card rv"><h4><span class="zh">北京大学 · 暑期交换</span><span class="en">Peking University · Summer</span></h4><div class="d">2025.07 – 08 · Beijing</div><p><span class="zh">量化投资、金融时序预测、文化产业调研。</span><span class="en">Quant investing, financial forecasting, creative-industry research.</span></p></div>
+      <div class="card rv"><h4><span class="zh">跨文化研究</span><span class="en">Cross-cultural research</span></h4><div class="d">Tencent · 2025</div><p><span class="zh">访谈 30 余个不同背景的家庭，提炼包容性传播策略。</span><span class="en">Interviewed 30+ families from different backgrounds to shape inclusive messaging.</span></p></div>
+      <div class="card rv"><h4><span class="zh">英语能力</span><span class="en">English</span></h4><div class="d">Working language</div><p><span class="zh">英语竞赛全国特等奖 · IELTS 6.5 · CET-4 600</span><span class="en">National English Contest Grand Prize · IELTS 6.5</span></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 欢迎联系 ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-g">
+    <div class="rv">
+      <div class="eyebrow" style="color:#8fb0ff">🍋 Get in touch</div>
+      <h2><span class="zh">欢迎联系</span><span class="en">Let's talk</span></h2>
+      <p><span class="zh">正在寻找快消外企品牌管理、CBD 方向的管培生与实习机会，可接受广州、上海、北京及全国轮岗。期待和你聊聊。</span><span class="en">I'm looking for brand management and CBD roles — graduate programs or internships — at global FMCG companies. Happy to work in Guangzhou, Shanghai, Beijing or anywhere the rotation takes me. I'd love to chat.</span></p>
+    </div>
+    <div class="cside rv">
+      <div class="cbox">
+        <a class="js-view" href="resume/%E8%A9%B9%E9%9B%A8%E8%90%8C-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7985-2027%E5%BA%94%E5%B1%8A%E6%A0%A1%E6%8B%9B.pdf" target="_blank" rel="noopener"><span><span class="zh">查看 / 下载简历</span><span class="en">View &amp; download résumé</span></span><span>PDF ↗</span></a>
+        <a class="js-view" href="resume/%E8%A9%B9%E9%9B%A8%E8%90%8C-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7985-2027%E5%BA%94%E5%B1%8A%E7%A7%8B%E6%8B%9B-%E4%BD%9C%E5%93%81%E9%9B%86.pdf" target="_blank" rel="noopener"><span><span class="zh">查看作品展示</span><span class="en">View portfolio</span></span><span>PDF ↗</span></a>
+        <a href="mailto:zhanyvmeng@126.com">zhanyvmeng@126.com<span><span class="zh">发邮件</span><span class="en">Email me</span> →</span></a>
+      </div>
+      <figure class="qr">
+        <img src="img/wechat-qr.png" alt="微信二维码 WeChat QR code" width="480" height="480" loading="lazy">
+        <figcaption><span class="zh">扫码添加微信</span><span class="en">Add me on WeChat</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<footer>© 2026 Yumeng Zhan · 詹雨萌</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l);
+    root.setAttribute('lang',l==='en'?'en':'zh-CN');
+    document.querySelectorAll('[data-set-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.setLang===l)});
+    document.title=l==='en'?'Yumeng Zhan · Brand & CBD':'詹雨萌 · 品牌管理 / CBD';
+    try{localStorage.setItem('ym-lang',l)}catch(e){}
+  }
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null;try{saved=localStorage.getItem('ym-lang')}catch(e){}
+  setLang(q==='en'||q==='zh'?q:(saved||'zh'));
+  document.querySelectorAll('[data-set-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.setLang)})});
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];sel(n);n.focus();e.preventDefault()}});
+  });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
